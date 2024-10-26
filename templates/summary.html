@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Budget Summary</title></head>
+<body>
+    <h1>Budget Summary</h1>
+    <p><strong>Total Income:</strong> ${{ income }}</p>
+    <p><strong>Total Expenses:</strong> ${{ expenses }}</p>
+    <p><strong>Remaining Balance:</strong> ${{ balance }}</p>
+    
+    <h2>Expenses by Category</h2>
+    <ul>
+        {% for category, amount in categorized_expenses.items() %}
+            <li><strong>{{ category }}:</strong> ${{ amount }}</li>
+        {% endfor %}
+    </ul>
+    
+    <a href="/">Back to Home</a>
+</body>
+</html>
